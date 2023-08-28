@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.swiper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  transition-timing-function: linear;
+}
+
+.swiper__button-circle {
+  width: rem(80);
+  height: rem(80);
+  background-color: $white;
+  border-radius: 50%;
+  border: 1px solid $green-accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper__button-arrow {
+  width: rem(40);
+  height: rem(5);
+  border-bottom: 1px solid $green-accent;
+  border-left: 1px solid $green-accent;
+  transform: skew(-45deg);
+}
+
+.swiper__button-arrow--right {
+  width: rem(40);
+  height: rem(5);
+  border-bottom: 1px solid $green-accent;
+  border-right: 1px solid $green-accent;
+  transform: skew(45deg);
+}
+
+.swiper [class^="swiper-button-"]::after {
+  content: "";
+}
+
+.swiper [class^="swiper-button-"] {
+  width: rem(80);
+  height: rem(80);
+}
+
+.swiper .swiper-button-prev {
+  position: absolute;
+  left: initial;
+  right: rem(150);
+  top: rem(32);
+}
+.swiper .swiper-button-next {
+  position: absolute;
+  top: rem(32);
+  right: 0;
+}

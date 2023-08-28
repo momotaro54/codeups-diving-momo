@@ -1,0 +1,141 @@
+@use "global" as *;
+
+.blog {
+  position: relative;
+  max-width: 1080px;
+  width: 100%;
+  margin: auto;
+}
+
+.blog::before {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: url(../images/common/blog.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    aspect-ratio: 1440 / 500;
+    top: 0;
+    left: 0;
+    margin: 0 calc(50% - 50vw);
+    z-index: -1;
+  }
+}
+
+.blog__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: rem(5);
+  @include mq(md) {
+    display: grid;
+    gap: rem(80) rem(40);
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: left;
+    padding-top: rem(56);
+  }
+}
+
+.blog__card {
+  max-width: rem(600);
+  padding: rem(16) rem(16) rem(24) rem(16);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  background-color: $white;
+}
+
+.blog__card:hover {
+  @include mq(md) {
+    background-color: rgba(221, 240, 241, 0.8);
+    transition: all 0.3s;
+  }
+}
+
+.blog__card:first-child {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+.blog__card:not(:first-child) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.blog__image {
+  position: relative;
+}
+
+.blog__image::before {
+  content: "";
+  display: block;
+  padding-top: 66.777%;
+}
+
+.blog__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog__card-date {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  display: block;
+  padding-top: rem(24);
+}
+
+.blog__card-title {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.5;
+  position: relative;
+  padding-bottom: rem(4);
+}
+
+.blog__card-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: rem(1);
+  background-color: $green-accent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.blog__card-text {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  padding-top: rem(16);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include mq(md) {
+    color: #000;
+  }
+}
+
+.blog__image-fish {
+  @include mq(md) {
+    position: absolute;
+    width: rem(376);
+    height: rem(120);
+    top: rem(24);
+    left: rem(100);
+  }
+}

@@ -1,0 +1,165 @@
+@use "global" as *;
+
+.footer {
+  background-color: $green-accent;
+}
+
+.footer__inner {
+  width: 100%;
+  height: rem(739);
+  @include mq(md) {
+    height: rem(559);
+    max-width: 1080px;
+    margin: auto;
+  }
+}
+
+.footer__logo-flex {
+  @include mq(md) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.footer__logo {
+  padding-top: rem(48);
+  @include mq(md) {
+    padding-top: rem(80);
+  }
+}
+
+.footer__logo img {
+  width: rem(120);
+  height: rem(45);
+  @include mq(md) {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.footer__sns {
+  display: flex;
+  padding-top: rem(16);
+}
+
+.footer__sns img {
+  width: rem(24);
+  height: rem(24);
+  @include mq(md) {
+    width: rem(32);
+    height: rem(32);
+  }
+}
+.footer__sns-instagram {
+  margin-left: rem(15);
+}
+
+.footer__sp-nav-lists,
+.footer__pc-nav-lists {
+  margin-top: rem(28);
+  font-family: $base-font-family;
+  color: $white;
+  font-weight: $bold;
+  font-size: rem(16);
+  column-count: 2;
+  line-height: 1.125;
+  white-space: nowrap;
+  @include mq(md) {
+    margin-top: rem(15);
+    width: 100%;
+    column-count: 4;
+  }
+}
+
+.footer__sp-nav-lists li a,
+.footer__pc-nav-lists li a {
+  display: inline-block;
+  width: 100%;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+}
+
+.footer__sp-nav-lists li:hover,
+.footer__pc-nav-lists li:hover {
+  @include mq(md) {
+    opacity: 0.8;
+    transition: all 0.5s;
+  }
+}
+
+.footer__sp-nav-lists--star a::before,
+.footer__pc-nav-lists--star a::before {
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/starfish.png) no-repeat;
+  background-size: contain;
+  margin-right: rem(4);
+  vertical-align: text-bottom;
+}
+
+.footer__sp-nav-lists--star-right a::before {
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/starfish.png) no-repeat;
+  background-size: contain;
+  margin-right: rem(4);
+  vertical-align: text-bottom;
+}
+
+.footer__sp-nav-lists--star-right-top {
+  position: relative;
+}
+
+.footer__sp-nav-lists--star-right-top::before {
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/starfish.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: rem(30);
+  left: 0;
+  margin-right: rem(4);
+}
+
+.footer__sp-nav-lists--privacy {
+  padding-left: rem(24);
+}
+
+.footer__sp-nav-lists--font-normal,
+.footer__pc-nav-lists--font-normal {
+  font-weight: $normal;
+  margin-left: rem(25);
+}
+
+.footer__sp-nav-lists--font-normal-right {
+  font-weight: $normal;
+  padding-left: rem(20);
+}
+
+.footer__sp-nav-lists--top,
+.footer__pc-nav-lists--top {
+  padding-top: rem(16);
+}
+
+.footer__copyright {
+  font-family: $font-family;
+  color: $white;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: rem(18);
+  padding-bottom: rem(54);
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.285;
+    padding-top: rem(56);
+    padding-bottom: rem(80);
+  }
+}

@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.main-button__wrapper {
+  text-align: center;
+  padding-top: rem(40);
+  @include mq(md) {
+    padding-top: rem(80);
+  }
+}
+
+.main-button__wrapper--top {
+  text-align: center;
+  padding-top: rem(40);
+}
+
+.main-button {
+  position: relative;
+  display: inline-block;
+  width: rem(202);
+  height: rem(54);
+  color: $white;
+  background-color: $green-accent;
+  border: 1px solid $green-accent;
+  font-family: $font-family;
+  font-size: rem(14);
+  line-height: 1.5714;
+  padding: rem(16) rem(40);
+  z-index: 1;
+}
+
+.main-button::before {
+  position: absolute;
+  content: "";
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.main-button span {
+  position: absolute;
+  content: "";
+  border: solid 1px $green-accent;
+  top: 4px;
+  left: 4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -3;
+}
+.main-button::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/common/button-arrow--white.svg);
+  background-position: center;
+  background-size: cover;
+  width: rem(40);
+  height: rem(6);
+  margin-left: rem(5);
+  vertical-align: middle;
+}
+
+.main-button:hover {
+  color: $green-accent;
+}
+
+.main-button:hover::before {
+  transform: scale(1, 1);
+}
+.main-button:hover::after {
+  background-image: url(../images/common/button-arrow--green.svg);
+  display: inline-block;
+  vertical-align: middle;
+  width: rem(40);
+}

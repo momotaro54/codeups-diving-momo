@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.section-top {
+  padding-top: rem(80);
+  @include mq(md) {
+    padding-top: rem(100);
+  }
+}
+
+.section-campaign {
+  padding-top: rem(40);
+  @include mq(md) {
+    padding-top: rem(120);
+  }
+}
+
+.section-green {
+  background-color: $light-green;
+}
+
+.section__eng-title {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(32);
+  line-height: 1.25;
+  font-weight: $normal;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1;
+  }
+}
+
+.section__eng-title::first-letter {
+  color: $green-accent;
+}
+
+.section__title {
+  padding-top: rem(4);
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  text-align: center;
+  @include mq(md) {
+    padding-top: rem(8);
+  }
+}
+
+.section__title--blog {
+  padding-top: rem(4);
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  text-align: center;
+  @include mq(md) {
+    color: $white;
+    padding-top: rem(8);
+  }
+}
+
+.section__title--voice {
+  padding-top: rem(4);
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  text-align: center;
+  @include mq(md) {
+    padding-top: rem(8);
+  }
+}
+
+.section__eng-title--blog {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(32);
+  line-height: 1.25;
+  font-weight: $normal;
+  text-align: center;
+  padding-top: rem(80);
+  @include mq(md) {
+    padding-top: rem(100);
+    font-size: rem(40);
+    line-height: 1;
+    color: $light-green;
+  }
+}
+
+.section__eng-title--blog::first-letter {
+  color: $green-accent;
+  @include mq(md) {
+    color: $light-green;
+  }
+}
+
+.section__eng-title--contact {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(80);
+  line-height: 1;
+  font-weight: $normal;
+  text-align: center;
+  padding-top: rem(36);
+  @include mq(md) {
+    padding-top: rem(24);
+  }
+}
+
+.section__eng-title--contact::first-letter {
+  color: $green-accent;
+}
+
+.section__title--contact {
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  text-align: center;
+}

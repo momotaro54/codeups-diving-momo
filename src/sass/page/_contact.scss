@@ -1,0 +1,166 @@
+@use "global" as *;
+
+.contact {
+  text-align: center;
+  position: relative;
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.contact__inner {
+  padding-top: rem(80);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-top: rem(151);
+    padding-bottom: rem(149);
+  }
+}
+
+.contact__pc-card {
+  @include mq(md) {
+    display: flex;
+    width: rem(1080);
+    height: rem(415);
+    justify-content: center;
+    padding-top: rem(69);
+    padding-bottom: rem(90);
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: $white;
+  }
+}
+
+.contact__logo {
+  width: rem(174);
+  height: rem(65);
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  @include mq(md) {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.contact__logo::after {
+  content: "";
+  display: block;
+  width: 168%;
+  transform: translateX(-19%);
+  height: rem(1);
+  background-color: $green-accent;
+  position: absolute;
+  left: 0;
+  bottom: rem(-10);
+  @include mq(md) {
+    width: 215%;
+    bottom: rem(-14);
+    transform: translateX(-28%);
+  }
+}
+
+.contact__image-fish {
+  position: absolute;
+  width: rem(109);
+  height: rem(50);
+  top: rem(60);
+  right: rem(20);
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(104);
+    right: rem(50);
+  }
+}
+
+.contact__pc-flex--left,
+.contact__pc-flex--right {
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.contact__pc-flex--right {
+  @include mq(md) {
+    position: relative;
+  }
+}
+.contact__pc-flex--right::before {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: $green-accent;
+    position: absolute;
+    top: 0;
+    left: rem(32);
+  }
+}
+
+.contact__pc-flex--map {
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(32);
+  }
+}
+
+.contact__info {
+  padding-top: rem(20);
+  padding-bottom: rem(16);
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.contact__text {
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $green;
+  line-height: 1.5;
+  font-weight: $normal;
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.contact__text p:not(:first-child) {
+  margin-top: rem(5);
+}
+
+.contact__map {
+  padding: 0 rem(25);
+  @include mq(md) {
+    padding-left: rem(10);
+    max-width: rem(273);
+  }
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 295 / 160;
+  @include mq(md) {
+    aspect-ratio: 273 / 148;
+  }
+}
+
+.contact__here {
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(14);
+  line-height: 1.28571;
+  font-weight: $normal;
+  text-align: center;
+  margin-top: rem(8);
+  @include mq(md) {
+    margin: rem(0);
+  }
+}
