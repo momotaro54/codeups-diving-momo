@@ -136,6 +136,6 @@
     width: rem(376);
     height: rem(120);
     top: rem(24);
-    left: rem(100);
+    left:calc(50% - min(44vw, rem(624)));
   }
 }

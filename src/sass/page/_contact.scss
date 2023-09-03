@@ -58,9 +58,9 @@
   left: 0;
   bottom: rem(-10);
   @include mq(md) {
-    width: 215%;
-    bottom: rem(-14);
-    transform: translateX(-28%);
+    width: 221%;
+    bottom: rem(-9);
+    transform: translateX(-27%);
   }
 }
 
@@ -73,8 +73,8 @@
   @include mq(md) {
     width: rem(301);
     height: rem(138);
-    top: rem(104);
-    right: rem(50);
+    top: rem(99);
+    right:calc(50% - min(47vw, rem(720)));
   }
 }
 
@@ -95,7 +95,7 @@
     position: absolute;
     content: "";
     width: 1px;
-    height: 100%;
+    height: 101%;
     background-color: $green-accent;
     position: absolute;
     top: 0;
@@ -106,8 +106,9 @@
 .contact__pc-flex--map {
   @include mq(md) {
     display: flex;
-    justify-content: center;
-    margin-top: rem(32);
+    justify-content: space-between;
+    margin-top: rem(24);
+    padding: 0 rem(47);
   }
 }
 
@@ -138,7 +139,7 @@
 .contact__map {
   padding: 0 rem(25);
   @include mq(md) {
-    padding-left: rem(10);
+    padding: 0;
     max-width: rem(273);
   }
 }
@@ -160,7 +161,4 @@
   font-weight: $normal;
   text-align: center;
   margin-top: rem(8);
-  @include mq(md) {
-    margin: rem(0);
-  }
 }

@@ -40,6 +40,9 @@
 .footer__sns {
   display: flex;
   padding-top: rem(16);
+  @include mq(md) {
+    margin-left: rem(40);
+  }
 }
 
 .footer__sns img {

@@ -20,7 +20,7 @@
     margin-top: rem(30);
     display: grid;
     gap: rem(80) rem(40);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
@@ -161,7 +161,7 @@
     width: rem(301);
     height: rem(138);
     top: rem(-120);
-    left: rem(98);
+    left: calc(50% - min(44vw, rem(624)));
   }
 }
 .voice__image-seahorse {
@@ -169,7 +169,7 @@
     position: absolute;
     width: rem(71);
     height: rem(162);
-    right: rem(180);
+    right: rem(20);
     bottom: rem(-73);
   }
 }

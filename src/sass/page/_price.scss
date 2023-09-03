@@ -135,6 +135,6 @@
   position: absolute;
   width: rem(437);
   height: rem(201);
-  left: rem(96);
+  left:calc(50% - min(47vw, rem(620)));
   bottom: rem(56);
 }

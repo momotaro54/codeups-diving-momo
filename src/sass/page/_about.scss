@@ -28,7 +28,7 @@
     width: rem(399);
     height: rem(606);
     top: rem(-60);
-    left: rem(-198);
+    left:calc(50% - min(54vw, rem(635)));
   }
 }
 
