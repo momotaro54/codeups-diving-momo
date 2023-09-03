@@ -3,21 +3,38 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(function () {
     $("#js-hamburger").click(function () {
       $("body").toggleClass("is-drawerActive");
-
+  
       if ($(this).attr("aria-expanded") == "false") {
         $(this).attr("aria-expanded", "true");
         $("#js-global-menu").attr("aria-hidden", "false");
+        
+        // ドロワーメニューを開いたときに背景のスクロールを無効化
+        $("body").css("overflow", "hidden");
       } else {
         $(this).attr("aria-expanded", "false");
         $("#js-global-menu").attr("aria-hidden", "true");
+        
+        // ドロワーメニューを閉じたときに背景のスクロールを有効化
+        $("body").css("overflow", "auto");
       }
     });
+  
+    // ドロワーメニューの背景をクリックしたときの動作を追加
     $("#js-drawer-background").click(function () {
+      closeDrawerMenu();
+    });
+  
+    // メニューを閉じる関数を定義
+    function closeDrawerMenu() {
       $("body").removeClass("is-drawerActive");
       $("#js-hamburger").attr("aria-expanded", "false");
       $("#js-global-menu").attr("aria-hidden", "true");
-    });
+      
+      // ドロワーメニューを閉じたときに背景のスクロールを有効化
+      $("body").css("overflow", "auto");
+    }
   });
+  
 
   const fvSwiper = new Swiper(".js-fv-swiper", {
     loop: true,
