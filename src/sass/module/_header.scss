@@ -44,7 +44,6 @@
   right: 0;
   bottom: 0;
   height: 100vh;
-  // height: rem(667);
   background-color: $green-accent;
   transform: translateX(475px);
   transition: 0.5s;
@@ -62,7 +61,7 @@
   font-size: rem(16);
   font-weight: $bold;
   line-height: 1.125;
-  padding-top: rem(45);
+  padding: rem(45) 0;
   width: 100%;
 }
 

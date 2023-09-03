@@ -35,6 +35,7 @@
     grid-template-columns: repeat(3, 1fr);
     justify-content: left;
     padding-top: rem(56);
+    // z-index: 1;
   }
 }
 
@@ -43,6 +44,7 @@
   padding: rem(16) rem(16) rem(24) rem(16);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   background-color: $white;
+  z-index: 1;
 }
 
 .blog__card:hover {
