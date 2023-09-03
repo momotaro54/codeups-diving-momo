@@ -43,10 +43,11 @@
   top: 0;
   right: 0;
   bottom: 0;
-  height: rem(667);
+  height: 100vh;
   background-color: $green-accent;
   transform: translateX(475px);
   transition: 0.5s;
+  overflow: scroll;
   @include mq(md) {
     display: none;
   }
