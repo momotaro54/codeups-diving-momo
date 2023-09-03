@@ -8,63 +8,21 @@
   position: absolute;
   right: rem(15);
   bottom: rem(755);
-  text-indent: -9999px;
   @include mq(md) {
     right: rem(20);
     bottom: rem(579);
   }
 }
 
-.pagetop a:hover {
-  opacity: 0.8;
-}
-
-.pagetop a {
+.pagetop img {
   width: rem(48);
   height: rem(48);
-  background-color: $white;
-  border-radius: 50%;
-  border: 1px solid $green-accent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   @include mq(md) {
     width: rem(80);
     height: rem(80);
   }
 }
 
-.pagetop a::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: $green-accent;
-  top: 12px;
-  left: 25px;
-  width: 1px;
-  height: 27px;
-  @include mq(md) {
-    left: 38px;
-    width: 1px;
-    height: 50px;
-  }
-}
-
-.pagetop a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent transparent $green-accent transparent;
-  transform: rotate(135deg);
-  top: 16px;
-  left: 19px;
-  width: 8px;
-  height: 3px;
-  @include mq(md) {
-    left: 30px;
-    width: 13px;
-    height: 6px;
-  }
+.pagetop a:hover {
+  opacity: 0.8;
 }

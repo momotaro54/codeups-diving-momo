@@ -16,7 +16,7 @@
 .main-button {
   position: relative;
   display: inline-block;
-  width: rem(202);
+  width: auto;
   height: rem(54);
   color: $white;
   background-color: $green-accent;
@@ -60,7 +60,7 @@
   background-size: cover;
   width: rem(40);
   height: rem(6);
-  margin-left: rem(5);
+  margin-left: rem(6);
   vertical-align: middle;
 }
 
